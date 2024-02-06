@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Module with script tag</title>
+  </head>
+  <body>
+    <h1>Module with script tag</h1>
+    <h2 style="background-color: aqua" id="box"></h2>
+
+    <script src="add.js"></script>
+    <script>
+      document.querySelector("#box").innerHTML = "The add.js module is loaded!";
+      console.log("add: ", window.add);
+      console.log("add(10, 5): ", window.add(10, 5));
+    </script>
+  </body>
+</html>

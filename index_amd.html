@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AMD module</title>
+    <script src="scripts/require.js"></script>
+  </head>
+  <body>
+    <h1>AMD module</h1>
+    <h2 style="background-color: aqua" id="box"></h2>
+    <script>
+      require(["add.js"], function (add) {
+        document.querySelector("#box").innerHTML =
+          "The add.js module is loaded!";
+        console.log("add: ", add);
+        console.log("add(10, 5): ", add(10, 5));
+      });
+    </script>
+  </body>
+</html>
